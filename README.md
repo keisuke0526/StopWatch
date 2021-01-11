@@ -19,9 +19,9 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Strict_mode
 スクールでは、JSはrailsに簡単に組み込んだ記憶しかなかったが、多くの関数を知ることができ汎用性があると感じた。個人的に今後とも力を入れて行こうと思えて、とても楽しいと感じた。
 
 
- ## 登場した関数
+# 登場した関数
 
- ### Math.floor()
+### Math.floor()
 リンク: https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
 引数に受けとった数値以下の最大の整数を返す。
 nullの場合は0を返す。
