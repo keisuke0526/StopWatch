@@ -25,6 +25,7 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Strict_mode
 リンク: https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
 引数に受けとった数値以下の最大の整数を返す。
 nullの場合は0を返す。
+
 Ex) 
 ```
 Math.floor( 45.95); //  45
