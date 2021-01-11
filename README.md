@@ -7,3 +7,6 @@ Startボタンを押した時の時刻からどれくらいの時間が経過し
 
 差分を表示させることでストップウォッチができる。
 Dateクラスは、ヒィうじゅんで備わっているため、インポートやクラスを定義する必要がない。
+
+### Strict モードに関して
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Strict_mode
