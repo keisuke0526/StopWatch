@@ -19,11 +19,11 @@
   var timerId;
 
   // ストップし、再開した時に0になるのを避けるための変数
-  var timerToAdd;
+  var timeToadd = 0;
+
 
   // ミリ秒ではなく、分や秒に治すための関数を用意
   // 計算方法  ->  EX)135200ミリを直すと02:15:200になる
-
   function updateTime() {
 
     // Math.floor()関数は与えられた数値以下の最大の整数を返す
@@ -36,19 +36,20 @@
     // ms(ミリ秒) = 135200ミリ秒を % 1000ミリ秒で割った余り。余りなので、Math.floor()関数は用いない
     var ms = elapsedTime % 1000;
 
+
     // HTMLの表示の桁数を固定する  EX)  3 -> 03  、12 -> 012
     // 文字列 + 数字 = 文字列となる
     // 末尾２桁を表示するため、sliceメソッドの引数を-2で指定する
-
     m = ('0' + m).slice(-2);
     s = ('0' + s).slice(-2);
-    ms = ('0' + ms), slice(-2);
+    ms = ('0' + ms).slice(-3);
 
     // htmlのIdであるtimerに、textContent関数を適用する。
     timer.textContent = m + ':' + s + ':' + ms;
   }
 
-  // // 再帰的に使える用の関数 (再帰的とは？: http://blog.livedoor.jp/engineercollege/archives/46559976.html)
+
+  // 再帰的に使える用の関数 (再帰的とは？: http://blog.livedoor.jp/engineercollege/archives/46559976.html)
   function countUp() {
 
     // 関数setTimeOutを定義し、戻り値をtimerIdに代入
@@ -66,37 +67,40 @@
   }
 
   // startボタンのクリックイベント
-  start.addEventListener('ckick', function () {
+  start.addEventListener('click', function () {
 
     // 現在時刻を代入
     startTime = Date.now();
 
     // countUp関数の呼び出し。押した時の時刻(startTime)をcountUp関数で処理をする
-    countUp()
+    countUp();
   });
 
   // stopボタンのクリックイベント
   stop.addEventListener('click', function () {
 
     // setTimeOutで実行した処理を止めるには、clearTimeOutを使う必要があり、引数にtimerIdが必要のため、渡す
-    clearTimeout(timerId)
+    clearTimeout(timerId);
+
 
     // ※ここ少し複雑
     // タイマーに表示される時間(elapsedTime)は、現在時刻からスタートボタンを押した時刻を引いたもので、タイマーを再開させたら0になる。
     // これを回避するため、過去のスタート時刻からストップ時間までの経過時間を足さなければならない。
     // elapsedTime = Data.now() - startTime + timeToAdd (timeToadd = ストップを押した時刻(Date.now)から直近のスタート時刻(startTime)を引く)
-    timeToAdd += Date.now() - startTime;
-  })
+    timeToadd += Date.now() - startTime;
+  });
 
   // resetボタンのクリックイベント
   reset.addEventListener('click', function () {
 
     // 経過時間を更新するための変数elapsedTimeを0にし、updateTimeで0になったタイムを表示
-    elapsedTime = 0
+    elapsedTime = 0;
 
-    //レセット時に0に初期化したいため、0を代入
-    timrToAdd = 0
+    //リセット時に0に初期化したいため、0を代入
+    timeToadd = 0;
 
+    //updateTimetTextで0になったタイムを表示
     updateTime();
-  })
+
+  });
 })();
