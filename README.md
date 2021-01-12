@@ -16,7 +16,7 @@ Dateクラスは、標準で備わっているため、インポートやクラ�
 https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Strict_mode
 
 ## 作成した第一印象
-スクールでは、JSはrailsに簡単に組み込んだ記憶しかなかったが、多くの関数を知ることができ汎用性があると感じた。個人的に今後とも力を入れて行こうと思えて、とても楽しいと感じた。
+スクールでは、JSはrailsに簡単に組み込んだ記憶しかなかったが、多くの関数があるということを知ることができ汎用性があると感じた。個人的に今後とも力を入れて行こうと思えて、とても楽しいと感じた。
 
 
 # 登場した関数
@@ -33,4 +33,18 @@ Math.floor( 45.05); //  45
 Math.floor(  4   ); //   4
 Math.floor(-45.05); // -46
 Math.floor(-45.95); // -46
+```
+
+### slice()
+リンク：https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+引数に受けとったインデックスを使い、元の配列をコピーし、新しく配列を作り返す。
+
+
+Ex)
+```
+let fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+var citrus = fruits.slice(1, 3);
+
+// fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+// citrus contains ['Orange','Lemon']
 ```

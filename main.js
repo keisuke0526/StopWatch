@@ -14,7 +14,7 @@
   var elapsedTime = 0
 
   //タイマーを止めるにはclearTimeoutメソッドが必要になるが、その引数にはidが必要なため、変数を用意する
-  //http://www.htmq.com/js/cleartimeout.shtmlこの辺りが参考になるかも
+  //http://www.htmq.com/js/cleartimeout.shtml この辺りが参考になるかも
   var timerId;
 
   //ストップし、再開した時に0になるのを避けるための変数
@@ -34,5 +34,12 @@
 
     //ms(ミリ秒) = 135200ミリ秒を % 1000ミリ秒で割った余り。余りなので、Math.floor()関数は用いない
     var ms = elapsedTime % 1000;
+
+    //HTMLの表示の桁数を固定する  EX)  3 -> 03  、12 -> 012
+    //文字列 + 数字 = 文字列となる
+    //末尾２桁を表示するため、sliceメソッドの引数を-2で指定する
+
+    m = ('0' + m).slice(-2);
   }
+
 })
