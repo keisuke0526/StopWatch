@@ -23,6 +23,7 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Strict_mode
 
 ### Math.floor()
 リンク: https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+
 引数に受けとった数値以下の最大の整数を返す。
 nullの場合は0を返す。
 
@@ -37,6 +38,7 @@ Math.floor(-45.95); // -46
 
 ### slice()
 リンク：https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+
 引数に受けとったインデックスを使い、元の配列をコピーし、新しく配列を作り返す。
 
 
@@ -52,6 +54,7 @@ var citrus = fruits.slice(1, 3);
 
 ### textContent
 リンク: https://developer.mozilla.org/ja/docs/Web/API/Node/textContent
+
 すべての要素の内容を取得する。
 
 Ex)
@@ -64,6 +67,7 @@ let text = document.getElementById('divA').textContent;
 
 ### setTimeOutメソッド
 リンク: https://www.sejuku.net/blog/24540
+
 ある処理を一定時間後に実行するように命令することができるメソッド(scalaでいうfutureを使ったThread.sleepの処理的な？)
 
 止める処理はclearTimeoutを使う。
