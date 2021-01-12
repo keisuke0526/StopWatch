@@ -19,7 +19,7 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Strict_mode
 スクールでは、JSはrailsに簡単に組み込んだ記憶しかなかったが、多くの関数があるということを知ることができ汎用性があると感じた。個人的に今後とも力を入れて行こうと思えて、とても楽しいと感じた。
 
 
-# 登場した関数
+# 登場した関数、メソッド
 
 ### Math.floor()
 リンク: https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
@@ -48,3 +48,22 @@ var citrus = fruits.slice(1, 3);
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
 // citrus contains ['Orange','Lemon']
 ```
+
+
+### textContent
+リンク: https://developer.mozilla.org/ja/docs/Web/API/Node/textContent
+すべての要素の内容を取得する。
+
+Ex)
+```
+<div id="divA">This is <span>some</span> text!</div>
+
+let text = document.getElementById('divA').textContent;
+// text は 'This is some text!' となる
+```
+
+### setTimeOutメソッド
+リンク: https://www.sejuku.net/blog/24540
+ある処理を一定時間後に実行するように命令することができるメソッド(scalaでいうfutureを使ったThread.sleepの処理的な？)
+
+止める処理はclearTimeoutを使う。
